@@ -1,0 +1,56 @@
+//-----------Proyecto--------------------------------
+GET http://localhost:3500/api/datosproyecto
+
+###
+GET http://localhost:3500/api/datoproyecto/65a05a3c3ac8f51e81e18920
+
+###
+POST http://localhost:3500/api/registarProyecto
+Content-Type: application/json
+
+{
+    "titulo": "lkoip",
+    "fecha": "2023/12/02",
+    "proceso": "Propuesta de grado",
+    "estadoProceso": "Pendiente",
+    "estudiante":"65f3c442d9f99e317eb01042"
+}
+
+
+###
+PUT http://localhost:3500/api/actualizarProyecto/65c684ae2dcee9d814eacbda
+Content-Type: application/json
+
+{
+     "nota": 3.5,
+     "comentario": "",
+     "estadoProceso": "Aprobado"
+}
+
+###
+DELETE http://localhost:3500/api/eliminarProyecto/6574bb3cac421660b44bc1e6
+
+//----------------- Estudiante----------------------------------------------------
+
+###
+GET http://localhost:3500/api/datoEstudianteproyecto/65c684ae2dcee9d814eacbda
+
+###
+PUT http://localhost:3500/api/registarUsuarioProyecto/65c684ae2dcee9d814eacbda
+Content-Type: application/json
+
+{
+     "estudiante":"65c6aec72dcee9d814ead144"
+}
+
+//---------------------------Jurado-------------------------------
+###
+GET http://localhost:3500/api/datoJuradoproyecto/65c684ae2dcee9d814eacbda
+
+###
+PUT http://localhost:3500/api/juradoproyecto/65c684ae2dcee9d814eacbda
+Content-Type: application/json
+
+{
+     "jurado":"65f3c383ec20f527c7e9dadc"
+}

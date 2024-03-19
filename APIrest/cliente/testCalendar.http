@@ -1,0 +1,54 @@
+//----------------------------Calendario------------------------
+###
+PUT http://localhost:3500/api/actualizarCalendario/656ea7177c0dde8fe2c27360
+Content-Type: application/json
+
+{
+    "periodo": "A",
+    "year": 2023   
+}
+
+###
+GET http://localhost:3500/api/datosCalendario
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdjNjk3OWY2MGNhNTAzNDljOTNhZDciLCJjb3JyZW8iOiJhZG1pbiIsImlhdCI6MTcwOTU4NTYzNywiZXhwIjoxNzA5NjcyMDM3fQ.TqB3XApufmWnwD9eKIZo1lbm41wAEZZf8sIqDo071NA
+
+---//----------------------------Procesos------------------------
+###
+GET http://localhost:3500/api/datosProcesos/656ea7177c0dde8fe2c27360
+
+###
+POST http://localhost:3500/api/agregarProcesos/656ea7177c0dde8fe2c27360
+Content-Type: application/json
+
+{
+    "nombre": "Propuesta de trabajo grado",
+    "fechaEntrega": "2024-01-05",
+    "fechaSesioncomite": "2024-01-18",
+    "fechaResultado": "2024-01-10"
+}    
+
+###
+DELETE http://localhost:3500/api/eliminarProceso/656ea7177c0dde8fe2c27360/65947384aa7272d328ee2740
+
+###
+GET http://localhost:3500/api/datoDelProceso/656ea7177c0dde8fe2c27360/65971b84e0d110e84241ffc8
+
+###
+PUT  http://localhost:3500/api/actualizarProcesos/656ea7177c0dde8fe2c27360/65971b84e0d110e84241ffc8
+Content-Type: application/json
+
+{
+   "fechaSesioncomite": "2023/12/06"
+}
+
+
+//----------------------------Roles----------------------
+###
+POST http://localhost:3500/api/registarRol
+Content-Type: application/json
+{
+    "nombre": "Administrador"
+}
+
+###
+GET http://localhost:3500/api/datosRoles

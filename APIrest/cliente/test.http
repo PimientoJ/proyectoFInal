@@ -1,0 +1,81 @@
+//--------------------Usuario-----------------------
+GET http://localhost:3500/api/seira/datosUsuario
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdiNzNmOTE3NWNkZWUyZjZlNTEyODIiLCJjb3JyZW8iOiJlc3R1ZGlhbnRlIiwiaWF0IjoxNzAyNTk1NzgzLCJleHAiOjE3MDI2ODIxODN9.-wTMXvav7WA2pgndHv9MrY0txHKw9dUEVBGH1YHJ55s
+
+###
+GET http://localhost:3500/api/seira/datosUsuarios
+
+
+###
+GET http://localhost:3500/api/seira/datosRolUsuario/657b73f9175cdee2f6e51282/656ab1832166f185397306a9
+
+###
+POST http://localhost:3500/api/seira/registarUsuario
+Content-Type: application/json
+
+{
+    "nombre": "Angarita",
+    "codigo": "16132046",
+    "correo": "angarita",
+    "celular": "11111111",
+    "pass": "123456",
+     "rol":"656ab1832166f185397306a9"
+
+}
+
+###
+PUT http://localhost:3500/api/seira/registarRolUsuario/65f3c383ec20f527c7e9dadc
+Content-Type: application/json
+
+{
+     "rol":"656ab1922166f185397306ad"
+}
+
+###
+PUT http://localhost:3500/api/seira/actualizarUsuario/65c6aec72dcee9d814ead144
+Content-Type: application/json
+
+{
+     "rol":"656ab1832166f185397306a9"
+}
+
+###
+DELETE http://localhost:3500/api/seira/eliminarUsuario/6564161817dbd7333fbfd1bf
+
+###
+POST http://localhost:3500/api/seira/loginUsuario
+Content-Type: application/json
+
+{
+    "correo":"cuc",
+    "pass":"123456"
+
+}
+
+###
+GET http://localhost:3500/api/seira/datosUsuarioLogueado/65f3c442d9f99e317eb01042
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWYzYzQ0MmQ5Zjk5ZTMxN2ViMDEwNDIiLCJjb3JyZW8iOiJsaXoiLCJpYXQiOjE3MTA1MzczNTgsImV4cCI6MTcxMDYyMzc1OH0.E6q35NlxhlMTdVClvvmgnLNGYVOpJ4bjo2MI1xEUh54
+  
+###
+PUT http://localhost:3500/api/seira/actualizarPassword/65f3c442d9f99e317eb01042
+Content-Type: application/json
+
+{
+     "pass":"123"
+}
+
+  //--------------------Rol-----------------------
+
+###
+ GET http://localhost:3500/api/datosRoles
+
+###
+GET http://localhost:3500/api/datoRol/656ab1452166f185397306a4
+
+
+//--------------dividir usuario por rol---------------
+
+###
+GET http://localhost:3500/api/seira/datosUsuarioEstudiante
+###
+GET http://localhost:3500/api/seira/datosUsuarioJurado
